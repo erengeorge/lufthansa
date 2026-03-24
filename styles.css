@@ -192,11 +192,6 @@ nav a.active {
     margin-bottom: 24px;
 }
 
-.hero-h1-sub {
-    display: block;
-    color: rgba(255, 255, 255, 0.35);
-}
-
 .hero-desc {
     font-size: 15px;
     font-weight: 400;
