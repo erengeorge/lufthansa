@@ -3,49 +3,41 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>LTP IT Service Catalog</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <!-- Floating brand: morphs from hero to navbar on scroll -->
   <div class="floating-brand" id="floatingBrand">
     <div class="fb-logo">
-      <img src="ltplogo.png" alt="Lufthansa Technik Philippines" />
+      <img src="ltplogo.png" alt="LTP logo" />
     </div>
     <div class="fb-text">
       <span class="fb-name">Lufthansa Technik Philippines</span>
-      <span class="fb-sub" id="navCatalogAnchor">IT Service Catalog</span>
+      <span class="fb-sub">IT Service Catalog</span>
     </div>
   </div>
-
-  <!-- Floating catalog title: morphs from H1 → navbar sub-label -->
   <div class="floating-catalog" id="floatingCatalog">IT Service Catalog</div>
 
   <header>
     <div class="scroll-progress" id="scrollProgress"></div>
     <div class="header-inner">
-      <!-- Invisible spacer anchor so nav links don't jump left -->
       <div class="brand-anchor" id="brandAnchor"></div>
       <nav id="mainNav">
-        <ul>
+        <ul id="navList">
           <li><a href="#channels">Channels</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#sla">SLA</a></li>
           <li><a href="#teams">Teams</a></li>
         </ul>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </header>
 
-  <!-- Mobile nav drawer -->
   <div class="mobile-nav" id="mobileNav">
-    <ul>
+    <ul id="mobileNavList">
       <li><a href="#channels" class="mobile-nav-link">Channels</a></li>
       <li><a href="#services" class="mobile-nav-link">Services</a></li>
       <li><a href="#sla" class="mobile-nav-link">SLA</a></li>
@@ -53,10 +45,9 @@
     </ul>
   </div>
 
-  <section class="hero">
+  <section class="hero" id="heroSection">
     <div class="hero-glow-a"></div>
     <div class="hero-glow-b"></div>
-    <!-- Invisible layout anchor so hero spacing is preserved -->
     <div class="hero-brand-block" id="heroBrandAnchor">
       <div class="hero-brand-logo"></div>
       <div class="hero-brand-text">
@@ -94,92 +85,70 @@
     </div>
   </section>
 
-  <main class="page">
-
-    <!-- 01 CHANNELS -->
+  <main class="page" id="mainPage">
     <section class="section reveal" id="channels">
       <div class="section-head">
         <span class="section-num">01</span>
         <h2 class="section-title">Request Channels</h2>
       </div>
       <div class="channels-grid">
-
         <div class="channel-card preferred reveal-card">
-          <div class="ch-icon-wrap">
-            <svg viewBox="0 0 24 24">
+          <div class="ch-icon-wrap"><svg viewBox="0 0 24 24">
               <rect x="3" y="3" width="18" height="14" rx="2" />
               <path d="M8 21h8M12 17v4" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="ch-title">IT Service Portal</div>
           <div class="ch-desc">Submit and track requests online through the self-service portal — available anytime,
             anywhere.</div>
-          <span class="ch-badge ch-badge-pref">&#9733; Preferred</span>
+          <span class="ch-badge ch-badge-pref">⭐ Preferred</span>
         </div>
-
         <div class="channel-card reveal-card">
-          <div class="ch-icon-wrap">
-            <svg viewBox="0 0 24 24">
+          <div class="ch-icon-wrap"><svg viewBox="0 0 24 24">
               <rect x="2" y="4" width="20" height="16" rx="2" />
               <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="ch-title">Service Desk Email</div>
           <div class="ch-desc">Send your IT request directly to the Service Desk via email for documented follow-up.
           </div>
           <span class="ch-badge ch-badge-std">Available</span>
         </div>
-
         <div class="channel-card reveal-card">
-          <div class="ch-icon-wrap">
-            <svg viewBox="0 0 24 24">
+          <div class="ch-icon-wrap"><svg viewBox="0 0 24 24">
               <path
                 d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.4 2 2 0 0 1 3.04 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.92z" />
-            </svg>
-          </div>
+            </svg></div>
           <div class="ch-title">Service Desk Hotline</div>
           <div class="ch-desc">Call the IT Service Desk directly for urgent or time-sensitive issues requiring immediate
             attention.</div>
           <span class="ch-badge ch-badge-std">Available</span>
         </div>
-
       </div>
     </section>
 
-    <!-- 02 SERVICES -->
     <section class="section reveal" id="services">
       <div class="section-head">
         <span class="section-num">02</span>
         <h2 class="section-title">Business Services</h2>
       </div>
-
       <div class="search-row">
-        <div class="search-icon">
-          <svg viewBox="0 0 24 24">
+        <div class="search-icon"><svg viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8" />
             <path d="m21 21-4.35-4.35" />
-          </svg>
-        </div>
-        <input class="search-input" type="text" placeholder="Search services&#x2026;" id="svcSearch"
-          oninput="filterSvc()" />
+          </svg></div>
+        <input class="search-input" type="text" placeholder="Search services…" id="svcSearch" />
         <span class="search-count" id="svcCount">10 services</span>
       </div>
-
       <div class="services-list" id="svcList">
-        <!-- SERVICE ITEMS -->
-
         <div class="svc-item" data-kw="executive support leadership presentation communication">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">Executive IT Support</div>
-              <div class="svc-meta">IT Service Delivery <span class="avail-chip chip-biz"><span
-                    class="dot"></span>Business Hours · Priority</span></div>
+              <div class="svc-meta"><span>IT Service Delivery</span> <span class="avail-chip chip-biz"><span
+                    class="dot"></span><span>Business Hours · Priority</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -189,12 +158,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Dedicated technical support for executive leadership ensuring reliable access
-                  to IT systems for communication, presentations, and business operations. Priority coordination is
-                  provided across all relevant IT teams.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">IT Service Delivery</div>
-                </div>
+                  to IT systems for communication, presentations, and business operations.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -209,17 +173,15 @@
         </div>
 
         <div class="svc-item" data-kw="workplace computers devices hardware laptop desktop peripherals">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <rect x="2" y="3" width="20" height="14" rx="2" />
                 <path d="M8 21h8M12 17v4" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">Workplace IT Services</div>
-              <div class="svc-meta">Workplace IT Support <span class="avail-chip chip-biz"><span
-                    class="dot"></span>Business Hours</span></div>
+              <div class="svc-meta"><span>Workplace IT Support</span> <span class="avail-chip chip-biz"><span
+                    class="dot"></span><span>Business Hours</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -229,12 +191,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Provides computers, peripherals, and technical support enabling all employees
-                  to perform their daily work. Covers the full lifecycle of endpoint devices from provisioning through
-                  decommissioning.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Workplace IT Support</div>
-                </div>
+                  to perform their daily work.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -249,17 +206,15 @@
         </div>
 
         <div class="svc-item" data-kw="microsoft office 365 email teams software productivity collaboration">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <rect x="2" y="4" width="20" height="16" rx="2" />
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
-              <div class="svc-name">Microsoft 365 &amp; Software Services</div>
-              <div class="svc-meta">Enterprise Applications <span class="avail-chip chip-always"><span
-                    class="dot"></span>24 × 7</span></div>
+              <div class="svc-name">Microsoft 365 & Software Services</div>
+              <div class="svc-meta"><span>Enterprise Applications</span> <span class="avail-chip chip-always"><span
+                    class="dot"></span><span>24 × 7</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -269,12 +224,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Provides access to Microsoft productivity and collaboration tools including
-                  email, Teams, and all approved business software. Ensures employees can communicate and collaborate
-                  reliably at all times.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Enterprise Applications</div>
-                </div>
+                  email, Teams, and all approved business software.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -289,18 +239,16 @@
         </div>
 
         <div class="svc-item" data-kw="network connectivity vpn wifi wired internet remote access">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" />
                 <path
                   d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">Network Services</div>
-              <div class="svc-meta">Network Operations <span class="avail-chip chip-always"><span class="dot"></span>24
-                  × 7</span></div>
+              <div class="svc-meta"><span>Network Operations</span> <span class="avail-chip chip-always"><span
+                    class="dot"></span><span>24 × 7</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -310,12 +258,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Provides stable network connectivity enabling all users to access corporate
-                  systems and internet services. Covers on-site wired and wireless infrastructure as well as secure
-                  remote VPN access.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Network Operations</div>
-                </div>
+                  systems and internet services including secure remote VPN access.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -330,17 +273,15 @@
         </div>
 
         <div class="svc-item" data-kw="phone mobile corporate devices communication">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <rect x="5" y="2" width="14" height="20" rx="2" />
                 <path d="M12 18h.01" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
-              <div class="svc-name">Phone &amp; Mobile Services</div>
-              <div class="svc-meta">IT Service Delivery <span class="avail-chip chip-biz"><span
-                    class="dot"></span>Business Hours</span></div>
+              <div class="svc-name">Phone & Mobile Services</div>
+              <div class="svc-meta"><span>IT Service Delivery</span> <span class="avail-chip chip-biz"><span
+                    class="dot"></span><span>Business Hours</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -350,12 +291,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Support for corporate mobile devices and communication services issued to
-                  authorized employees. Covers setup, configuration, and ongoing troubleshooting of mobile devices and
-                  email access.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">IT Service Delivery</div>
-                </div>
+                  authorized employees.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -370,18 +306,16 @@
         </div>
 
         <div class="svc-item" data-kw="printer printing office shared network vendor">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
                 <rect x="6" y="14" width="12" height="8" rx="1" />
                 <path d="M6 9V3h12v6" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">Printer Services</div>
-              <div class="svc-meta">Workplace IT Support <span class="avail-chip chip-biz"><span
-                    class="dot"></span>Business Hours</span></div>
+              <div class="svc-meta"><span>Workplace IT Support</span> <span class="avail-chip chip-biz"><span
+                    class="dot"></span><span>Business Hours</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -391,12 +325,7 @@
             <div class="svc-body-inner">
               <div class="svc-body-content">
                 <p class="svc-desc-text">Office printing services and support for all shared network printers across
-                  departments. Includes fault logging, driver setup, and vendor coordination for hardware maintenance
-                  and consumables.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Workplace IT Support</div>
-                </div>
+                  departments including vendor coordination.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
@@ -411,17 +340,15 @@
         </div>
 
         <div class="svc-item" data-kw="password reset locked account access credentials forgotten">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <rect x="3" y="11" width="18" height="11" rx="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">Password Reset</div>
-              <div class="svc-meta">Service Desk <span class="avail-chip chip-biz"><span class="dot"></span>Business
-                  Hours</span></div>
+              <div class="svc-meta"><span>Service Desk</span> <span class="avail-chip chip-biz"><span
+                    class="dot"></span><span>Business Hours</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -430,18 +357,14 @@
           <div class="svc-body">
             <div class="svc-body-inner">
               <div class="svc-body-content">
-                <p class="svc-desc-text">Provides assistance when users are unable to access corporate systems due to
-                  forgotten passwords or locked accounts. Identity is securely verified before any reset is performed.
-                </p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Service Desk</div>
-                </div>
+                <p class="svc-desc-text">Account unlock and password reset services for all corporate systems and
+                  applications within the LTP IT environment.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
-                    <li>Fast restoration of system access</li>
-                    <li>Secure identity verification before reset</li>
+                    <li>Rapid account unlock and password reset</li>
+                    <li>Secure identity verification process</li>
+                    <li>Guidance on password policy compliance</li>
                   </ul>
                 </div>
               </div>
@@ -449,18 +372,16 @@
           </div>
         </div>
 
-        <div class="svc-item" data-kw="trax aviation maintenance operational hangar system">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M22 2L11 13" />
-                <path d="M22 2 15 22l-4-9-9-4 20-7z" />
-              </svg>
-            </div>
+        <div class="svc-item" data-kw="itsm service management ticket incident request change problem">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <path d="M14 2v6h6M16 13H8M16 17H8M10 9H8" />
+              </svg></div>
             <div class="svc-trigger-body">
-              <div class="svc-name">TRAX System Support</div>
-              <div class="svc-meta">Enterprise Applications <span class="avail-chip chip-critical"><span
-                    class="dot"></span>24 × 7 for Critical</span></div>
+              <div class="svc-name">IT Service Management (ITSM)</div>
+              <div class="svc-meta"><span>IT Operations</span> <span class="avail-chip chip-always"><span
+                    class="dot"></span><span>24 × 7</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -469,19 +390,14 @@
           <div class="svc-body">
             <div class="svc-body-inner">
               <div class="svc-body-content">
-                <p class="svc-desc-text">Support for the TRAX aviation maintenance system central to LTP's operational
-                  activities. Critical incidents are supported around the clock. Vendor coordination is initiated when
-                  issues cannot be resolved internally.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Enterprise Applications</div>
-                </div>
+                <p class="svc-desc-text">End-to-end incident, request, change, and problem management ensuring all IT
+                  services are tracked, prioritized, and resolved efficiently.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
-                    <li>System access assistance</li>
-                    <li>Operational issue troubleshooting</li>
-                    <li>Vendor coordination when required</li>
+                    <li>All requests logged and tracked via ITSM platform</li>
+                    <li>Timely status updates on open tickets</li>
+                    <li>Structured change management process</li>
                   </ul>
                 </div>
               </div>
@@ -489,58 +405,15 @@
           </div>
         </div>
 
-        <div class="svc-item" data-kw="application enterprise departmental business system">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
-                <rect x="2" y="2" width="9" height="9" rx="1" />
-                <rect x="13" y="2" width="9" height="9" rx="1" />
-                <rect x="2" y="13" width="9" height="9" rx="1" />
-                <rect x="13" y="13" width="9" height="9" rx="1" />
-              </svg>
-            </div>
-            <div class="svc-trigger-body">
-              <div class="svc-name">Other Application Services</div>
-              <div class="svc-meta">Enterprise Applications <span class="avail-chip chip-biz"><span
-                    class="dot"></span>Business Hours</span></div>
-            </div>
-            <div class="svc-chevron"><svg viewBox="0 0 24 24">
-                <path d="M6 9l6 6 6-6" />
-              </svg></div>
-          </div>
-          <div class="svc-body">
-            <div class="svc-body-inner">
-              <div class="svc-body-content">
-                <p class="svc-desc-text">Support for enterprise and departmental business applications used across the
-                  organization. Covers access provisioning, troubleshooting, and liaising with application vendors as
-                  needed.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">Enterprise Applications</div>
-                </div>
-                <div>
-                  <div class="detail-block-title">User Expectations</div>
-                  <ul class="expect-list">
-                    <li>Application access assistance</li>
-                    <li>Application issue troubleshooting</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="svc-item" data-kw="security cybersecurity threats protection monitoring access control">
-          <div class="svc-trigger" onclick="toggleSvc(this)">
-            <div class="svc-icon">
-              <svg viewBox="0 0 24 24">
+        <div class="svc-item" data-kw="security cybersecurity antivirus access permissions identity awareness">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-              </svg>
-            </div>
+              </svg></div>
             <div class="svc-trigger-body">
               <div class="svc-name">IT Security Services</div>
-              <div class="svc-meta">IT Security <span class="avail-chip chip-always"><span class="dot"></span>24 × 7
-                  Monitoring</span></div>
+              <div class="svc-meta"><span>Information Security</span> <span class="avail-chip chip-always"><span
+                    class="dot"></span><span>24 × 7 Monitoring</span></span></div>
             </div>
             <div class="svc-chevron"><svg viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
@@ -549,19 +422,14 @@
           <div class="svc-body">
             <div class="svc-body-inner">
               <div class="svc-body-content">
-                <p class="svc-desc-text">Ensures continuous protection of company systems, data, and users through
-                  security monitoring, threat response, and strict access control. Enforces security policies and
-                  investigates reported incidents promptly.</p>
-                <div>
-                  <div class="detail-block-title">Service Owner</div>
-                  <div class="detail-owner">IT Security</div>
-                </div>
+                <p class="svc-desc-text">Protects LTP IT assets and data through endpoint security, access control,
+                  identity management, and continuous security monitoring.</p>
                 <div>
                   <div class="detail-block-title">User Expectations</div>
                   <ul class="expect-list">
-                    <li>Protection against cyber threats</li>
-                    <li>Security incident investigation</li>
-                    <li>Enforcement of security policies</li>
+                    <li>Endpoint protection on all corporate devices</li>
+                    <li>Role-based access and user provisioning</li>
+                    <li>Security awareness and incident response</li>
                   </ul>
                 </div>
               </div>
@@ -569,12 +437,43 @@
           </div>
         </div>
 
-        <div id="noResults">No services found. Try a different keyword.</div>
-
+        <div class="svc-item" data-kw="infrastructure server datacenter backup storage cloud hosting">
+          <div class="svc-trigger">
+            <div class="svc-icon"><svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="8" rx="2" />
+                <rect x="2" y="14" width="20" height="8" rx="2" />
+                <path d="M6 6h.01M6 18h.01" />
+              </svg></div>
+            <div class="svc-trigger-body">
+              <div class="svc-name">IT Infrastructure & Systems</div>
+              <div class="svc-meta"><span>Infrastructure & Operations</span> <span class="avail-chip chip-always"><span
+                    class="dot"></span><span>24 × 7</span></span></div>
+            </div>
+            <div class="svc-chevron"><svg viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg></div>
+          </div>
+          <div class="svc-body">
+            <div class="svc-body-inner">
+              <div class="svc-body-content">
+                <p class="svc-desc-text">Manages all server, storage, backup, and cloud infrastructure ensuring high
+                  availability and data resilience for LTP business operations.</p>
+                <div>
+                  <div class="detail-block-title">User Expectations</div>
+                  <ul class="expect-list">
+                    <li>High system availability and uptime</li>
+                    <li>Regular data backup and recovery testing</li>
+                    <li>Proactive infrastructure monitoring and alerts</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <div id="noResults">No services match your search.</div>
     </section>
 
-    <!-- 03 SLA -->
     <section class="section reveal" id="sla">
       <div class="section-head">
         <span class="section-num">03</span>
@@ -585,344 +484,338 @@
           <thead>
             <tr>
               <th>Priority</th>
-              <th>Description</th>
+              <th>Severity</th>
               <th>Response Time</th>
-              <th>Target Resolution</th>
+              <th>Resolution Target</th>
+              <th>Support Coverage</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><span class="p-pill pp1"><span class="p-dot"></span>P1 — Critical</span></td>
-              <td class="sev">Complete outage or major operational impact</td>
+              <td><span class="p-pill pp1"><span class="p-dot"></span>P1</span></td>
+              <td class="sev">Critical — complete service failure affecting entire organisation</td>
               <td><span class="time-val t-red">15 minutes</span></td>
               <td><span class="time-val t-red">4 hours</span></td>
+              <td>24 × 7</td>
             </tr>
             <tr>
-              <td><span class="p-pill pp2"><span class="p-dot"></span>P2 — High</span></td>
-              <td class="sev">Significant degradation affecting key users or systems</td>
+              <td><span class="p-pill pp2"><span class="p-dot"></span>P2</span></td>
+              <td class="sev">High — significant impact on key business process or multiple users</td>
               <td><span class="time-val t-amber">30 minutes</span></td>
               <td><span class="time-val t-amber">8 hours</span></td>
+              <td>Business Hours</td>
             </tr>
             <tr>
-              <td><span class="p-pill pp3"><span class="p-dot"></span>P3 — Medium</span></td>
-              <td class="sev">Partial service impact with a viable workaround</td>
-              <td><span class="time-val t-blue">4 hours</span></td>
-              <td><span class="time-val t-blue">2 business days</span></td>
+              <td><span class="p-pill pp3"><span class="p-dot"></span>P3</span></td>
+              <td class="sev">Medium — moderate impact, workaround available</td>
+              <td><span class="time-val t-blue">2 hours</span></td>
+              <td><span class="time-val t-blue">3 business days</span></td>
+              <td>Business Hours</td>
             </tr>
             <tr>
-              <td><span class="p-pill pp4"><span class="p-dot"></span>P4 — Low</span></td>
-              <td class="sev">Minor issue or general service request</td>
-              <td><span class="time-val t-green">1 business day</span></td>
-              <td><span class="time-val t-green">3–5 business days</span></td>
+              <td><span class="p-pill pp4"><span class="p-dot"></span>P4</span></td>
+              <td class="sev">Low — minimal impact, general request or inquiry</td>
+              <td><span class="time-val t-green">4 hours</span></td>
+              <td><span class="time-val t-green">5 business days</span></td>
+              <td>Business Hours</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- 04 TEAMS -->
     <section class="section reveal" id="teams">
       <div class="section-head">
         <span class="section-num">04</span>
-        <h2 class="section-title">Operational Teams</h2>
+        <h2 class="section-title">IT Teams & Responsibilities</h2>
       </div>
       <div class="teams-grid">
-
         <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-            </svg>
-          </div>
+            </svg></div>
           <div>
             <div class="team-name">Service Desk</div>
-            <div class="team-resp">User support and ticket management</div>
+            <div class="team-resp">First point of contact for all IT incidents and requests</div>
           </div>
         </div>
 
         <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
               <rect x="2" y="3" width="20" height="14" rx="2" />
               <path d="M8 21h8M12 17v4" />
-            </svg>
-          </div>
+            </svg></div>
           <div>
-            <div class="team-name">Workplace Support</div>
-            <div class="team-resp">Device and workplace technology</div>
+            <div class="team-name">Workplace IT Support</div>
+            <div class="team-resp">End-user devices, peripherals, and on-site hardware support</div>
           </div>
         </div>
 
         <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" />
               <path
                 d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-            </svg>
-          </div>
+            </svg></div>
           <div>
             <div class="team-name">Network Operations</div>
-            <div class="team-resp">Network connectivity</div>
+            <div class="team-resp">LAN, WAN, Wi-Fi infrastructure and VPN connectivity</div>
           </div>
         </div>
 
         <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg></div>
+          <div>
+            <div class="team-name">Enterprise Applications</div>
+            <div class="team-resp">Microsoft 365, business software, and application licensing</div>
+          </div>
+        </div>
+
+        <div class="team-card reveal-card">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="8" rx="2" />
               <rect x="2" y="14" width="20" height="8" rx="2" />
               <path d="M6 6h.01M6 18h.01" />
-            </svg>
-          </div>
+            </svg></div>
           <div>
-            <div class="team-name">Infrastructure Team</div>
-            <div class="team-resp">Servers and cloud platforms</div>
+            <div class="team-name">Infrastructure & Operations</div>
+            <div class="team-resp">Servers, storage, backup systems, and cloud services</div>
           </div>
         </div>
 
         <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
-              <rect x="2" y="2" width="9" height="9" rx="1" />
-              <rect x="13" y="2" width="9" height="9" rx="1" />
-              <rect x="2" y="13" width="9" height="9" rx="1" />
-              <rect x="13" y="13" width="9" height="9" rx="1" />
-            </svg>
-          </div>
-          <div>
-            <div class="team-name">Enterprise Applications</div>
-            <div class="team-resp">Business system support</div>
-          </div>
-        </div>
-
-        <div class="team-card reveal-card">
-          <div class="team-icon">
-            <svg viewBox="0 0 24 24">
+          <div class="team-icon"><svg viewBox="0 0 24 24">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-          </div>
+            </svg></div>
           <div>
-            <div class="team-name">IT Security</div>
-            <div class="team-resp">Cybersecurity monitoring</div>
+            <div class="team-name">Information Security</div>
+            <div class="team-resp">Cybersecurity, compliance, access governance, and awareness</div>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <footer>
-
     <div class="footer-inner">
       <div>
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="ltplogo.png" alt="Lufthansa Technik Philippines" />
+            <img src="ltplogo.png" alt="LTP logo" />
           </div>
           <span class="footer-org">Lufthansa Technik Philippines</span>
         </div>
-        <div class="footer-meta">
-          Owner: IT Service Management &nbsp;·&nbsp; Approved by: VP – IT<br>
-          All service requests are tracked through the ITSM system.<br>
-          Services are continuously improved through monitoring of resolution times, availability, and change success
-          rates.
-        </div>
+        <p class="footer-meta">IT Department · Internal Use Only<br>All service requests must be submitted through
+          official IT channels. SLA targets apply during standard business hours unless otherwise stated.</p>
       </div>
       <div class="footer-tags">
-        <span class="f-tag">ITSM Managed</span>
-        <span class="f-tag">Continuous Improvement</span>
-        <span class="f-tag">IT Service Delivery</span>
+        <span class="f-tag">ITSM-Managed</span>
+        <span class="f-tag">ISO-Aligned</span>
+        <span class="f-tag">LTP IT 2025</span>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&#169; 2026 Lufthansa Technik Philippines &#8212; IT Department</span>
-      <span>Version 2026 &nbsp;·&nbsp; Concise Edition</span>
+      <span>© 2025 Lufthansa Technik Philippines · IT Department</span>
     </div>
   </footer>
 
   <script>
     function toggleSvc(trigger) {
       const item = trigger.closest('.svc-item');
+      if (!item) return;
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.svc-item.open').forEach(el => el.classList.remove('open'));
+      const list = item.closest('.services-list');
+      if (list) list.querySelectorAll('.svc-item.open').forEach(i => i.classList.remove('open'));
       if (!isOpen) item.classList.add('open');
     }
 
     function filterSvc() {
-      const q = document.getElementById('svcSearch').value.toLowerCase().trim();
-      const items = document.querySelectorAll('#svcList .svc-item');
-      let vis = 0;
-      items.forEach(item => {
-        const show = !q || (item.dataset.kw || '').includes(q) || item.innerText.toLowerCase().includes(q);
-        item.style.display = show ? '' : 'none';
-        if (show) vis++;
+      const input = document.getElementById('svcSearch');
+      const q = input.value.toLowerCase().trim();
+      let count = 0;
+
+      document.querySelectorAll('#svcList .svc-item').forEach(item => {
+        const name = item.querySelector('.svc-name')?.textContent.toLowerCase() || '';
+        const kw = item.dataset.kw || '';
+        const match = !q || name.includes(q) || kw.includes(q);
+        item.style.display = match ? '' : 'none';
+        if (match) count++;
       });
-      document.getElementById('svcCount').textContent = vis + ' service' + (vis !== 1 ? 's' : '');
-      document.getElementById('noResults').style.display = vis === 0 ? 'block' : 'none';
+
+      document.getElementById('svcCount').textContent = count + (count === 1 ? ' service' : ' services');
+      document.getElementById('noResults').style.display = count === 0 ? 'block' : 'none';
     }
 
-    // ── Seamless morph: brand + h1 title → navbar ────────────────────────
-    const fb = document.getElementById('floatingBrand');
-    const fc = document.getElementById('floatingCatalog');
-    const heroAnchor = document.getElementById('heroBrandAnchor');
-    const navAnchor = document.getElementById('brandAnchor');
-    const h1Anchor = document.getElementById('h1CatalogAnchor');
-    const navSubAnchor = document.getElementById('navCatalogAnchor');
-
-    function lerp(a, b, t) { return a + (b - a) * t; }
-    function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
-    function ease(t) { return t < .5 ? 2 * t * t : -1 + (4 - 2 * t) * t; }
-    function remap(t, inLo, inHi) { return ease(clamp((t - inLo) / (inHi - inLo), 0, 1)); }
-    function blurPeak(t) { return Math.sin(Math.PI * t); }
-
-    const H = { logoSize: 64, nameSize: 30, gap: 18 };
-    const N = { logoSize: 41, nameSize: 15, gap: 14 };
-    const TRANSITION_PX = 420;
-
-    // Capture hero anchor positions ONCE at load (scroll=0)
-    // so moving document flow doesn't cause the rise-then-down arc
-    let heroRect0 = null;
-    let h1Rect0 = null;
-    let h1FontSize0 = null;
-
-    function captureStartPositions() {
-      heroRect0 = heroAnchor.getBoundingClientRect();
-      h1Rect0 = h1Anchor.getBoundingClientRect();
-      h1FontSize0 = parseFloat(getComputedStyle(h1Anchor).fontSize);
-    }
-
-    function updateBrand() {
-      const raw = clamp(window.scrollY / TRANSITION_PX, 0, 1);
-
-      const tLogo = remap(raw, 0, 0.75);
-      const tName = remap(raw, 0, 0.75);
-
-      // Start = fixed capture; End = live navbar anchor (sticky, always visible)
-      const nRect = navAnchor.getBoundingClientRect();
-
-      const logoSize = lerp(H.logoSize, N.logoSize, tLogo);
-      const nameSize = lerp(H.nameSize, N.nameSize, tName);
-      const gap = lerp(H.gap, N.gap, tLogo);
-      const logoBlur = blurPeak(tLogo) * 3;
-      const nameBlur = blurPeak(tName) * 3;
-
-      fb.style.cssText = `top:${lerp(heroRect0.top, nRect.top, tLogo)}px;left:${lerp(heroRect0.left, nRect.left, tLogo)}px;gap:${gap}px;`;
-      fb.querySelector('.fb-logo').style.cssText = `width:${logoSize}px;height:${logoSize}px;filter:blur(${logoBlur}px);`;
-      fb.querySelector('.fb-logo img').style.cssText = `width:${logoSize * .875}px;height:${logoSize * .875}px;`;
-      fb.querySelector('.fb-name').style.cssText = `font-size:${nameSize}px;filter:blur(${nameBlur}px);`;
-      fb.querySelector('.fb-sub').style.opacity = '0';
-    }
-
-    function updateCatalog() {
-      const raw = clamp(window.scrollY / TRANSITION_PX, 0, 1);
-      const t = remap(raw, 0, 0.7);
-
-      const nRect = navSubAnchor.getBoundingClientRect();
-      const fontSize = lerp(h1FontSize0, 8, t);
-      const ls = lerp(-0.03, 0.14, t);
-      const opacity = lerp(1, 0.38, t);
-      const fw = t > 0.5 ? 500 : 700;
-      const tt = t > 0.75 ? 'uppercase' : 'none';
-      const blur = blurPeak(t) * 6;
-
-      fc.style.cssText = `
-        top:${lerp(h1Rect0.top, nRect.top, t)}px;
-        left:${lerp(h1Rect0.left, nRect.left, t)}px;
-        font-size:${fontSize}px;
-        letter-spacing:${ls}em;
-        opacity:${opacity};
-        font-weight:${fw};
-        text-transform:${tt};
-        filter:blur(${blur}px);
-      `;
-    }
-
-    function onScroll() {
-      updateBrand();
-      updateCatalog();
-      updateScrollProgress();
-    }
-
-    // ── Scroll progress bar ───────────────────────────────────────────────
-    const progressBar = document.getElementById('scrollProgress');
     function updateScrollProgress() {
-      const docH = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
-      progressBar.style.width = pct + '%';
+      const doc = document.documentElement;
+      const total = doc.scrollHeight - doc.clientHeight;
+      const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
+      document.getElementById('scrollProgress').style.width = pct + '%';
     }
 
-    // ── Section & card reveal on scroll ──────────────────────────────────
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObserver.unobserve(e.target);
-        }
+    function setupReveal() {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          if (entry.target.classList.contains('reveal-card')) {
+            const cards = [...(entry.target.parentElement?.querySelectorAll('.reveal-card') || [])];
+            const idx = cards.indexOf(entry.target);
+            setTimeout(() => entry.target.classList.add('visible'), Math.max(idx, 0) * 60);
+          } else {
+            entry.target.classList.add('visible');
+          }
+          obs.unobserve(entry.target);
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.reveal, .reveal-card').forEach(el => obs.observe(el));
+    }
+
+    function updateActiveNav() {
+      const desktopLinks = document.querySelectorAll('nav a');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+      const sections = ['channels', 'services', 'sla', 'teams'];
+      let active = '';
+
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const r = el.getBoundingClientRect();
+        if (r.top <= 120 && r.bottom >= 120) active = id;
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // Stagger card reveals within each section
-    const cardObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          const cards = e.target.querySelectorAll('.reveal-card');
-          cards.forEach((card, i) => {
-            setTimeout(() => card.classList.add('visible'), i * 80);
-          });
-          cardObserver.unobserve(e.target);
-        }
+      desktopLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + active);
       });
-    }, { threshold: 0.05 });
+      mobileLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + active);
+      });
+    }
 
-    document.querySelectorAll('.channels-grid, .teams-grid').forEach(grid => cardObserver.observe(grid));
+    function closeMobileNav() {
+      document.getElementById('mobileNav').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+      document.body.classList.remove('nav-open');
+    }
 
-    // ── Hamburger menu ────────────────────────────────────────────────────
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobileNav');
+    function morphBrand() {
+      const fb = document.getElementById('floatingBrand');
+      const fc = document.getElementById('floatingCatalog');
+      const hero = document.getElementById('heroBrandAnchor');
+      const nav = document.getElementById('brandAnchor');
+      const h1Anchor = document.getElementById('h1CatalogAnchor');
+      const fbName = fb.querySelector('.fb-name');
+      const fbSub = fb.querySelector('.fb-sub');
 
-    hamburger.addEventListener('click', () => {
-      const open = hamburger.classList.toggle('open');
-      mobileNav.classList.toggle('open', open);
+      if (!hero || !nav || !fb || !fc || !h1Anchor) return;
+
+      const heroR = hero.getBoundingClientRect();
+      const navR = nav.getBoundingClientRect();
+      const h1R = h1Anchor.getBoundingClientRect();
+
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const heroH = document.getElementById('heroSection')?.offsetHeight || 400;
+      const progress = Math.min(Math.max(scrollTop / (heroH * 0.6), 0), 1);
+      const eased = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+
+      const heroLogoSz = 64;
+      const navLogoSz = 41;
+      const logoSz = heroLogoSz + (navLogoSz - heroLogoSz) * eased;
+
+      const heroLeft = heroR.left;
+      const navLeft = navR.left;
+      const heroTop = heroR.top;
+      const navTop = navR.top;
+      const left = heroLeft + (navLeft - heroLeft) * eased;
+      const top = heroTop + (navTop - heroTop) * eased;
+
+      fb.style.left = left + 'px';
+      fb.style.top = top + 'px';
+      fb.style.gap = (18 + (12 - 18) * eased) + 'px';
+
+      const motionBlur = Math.sin(progress * Math.PI) * 3;
+      const motionOpacity = 1 - (Math.sin(progress * Math.PI) * 0.08);
+      fb.style.filter = `blur(${motionBlur.toFixed(2)}px)`;
+      fb.style.opacity = motionOpacity.toFixed(3);
+
+      const logoEl = fb.querySelector('.fb-logo');
+      const logoImg = fb.querySelector('.fb-logo img');
+      logoEl.style.width = logoSz + 'px';
+      logoEl.style.height = logoSz + 'px';
+      logoImg.style.width = (logoSz * 0.88) + 'px';
+      logoImg.style.height = (logoSz * 0.88) + 'px';
+
+      const heroNameSz = 28;
+      const navNameSz = 15;
+      const nameSz = heroNameSz + (navNameSz - heroNameSz) * eased;
+      fbName.style.fontSize = nameSz + 'px';
+      fbSub.style.opacity = eased - 1;
+
+      const h1Size = parseFloat(getComputedStyle(h1Anchor).fontSize) || 60;
+      const navTitleSize = 10;
+      const titleSz = h1Size + (navTitleSize - h1Size) * eased;
+
+      const h1CatalogX = h1R.left;
+      const h1CatalogY = h1R.top;
+
+      const fbNameR = fbName.getBoundingClientRect();
+      const navCatalogX = fbNameR.left;
+      const navCatalogY = fbNameR.bottom + 1;
+
+      const fcLeft = h1CatalogX + (navCatalogX - h1CatalogX) * eased;
+      const fcTop = h1CatalogY + (navCatalogY - h1CatalogY) * eased;
+      const fcW = 900 + (220 - 900) * eased;
+
+      const catalogBlur = Math.sin(progress * Math.PI) * 3;
+      const catalogOpacity = 1 - (Math.sin(progress * Math.PI) * 0.12);
+
+      fc.style.left = fcLeft + 'px';
+      fc.style.top = fcTop + 'px';
+      fc.style.fontSize = titleSz + 'px';
+      fc.style.fontWeight = '600';
+      fc.style.width = fcW + 'px';
+      fc.style.letterSpacing = (-0.03 + (0.05 * eased)) + 'em';
+      fc.style.color = eased > 0.5 ? 'rgba(255,255,255,0.38)' : 'var(--white)';
+      fc.style.textTransform = eased > 0.5 ? 'capitalize' : 'none';
+      fc.style.filter = `blur(${catalogBlur.toFixed(2)}px)`;
+      fc.style.opacity = catalogOpacity.toFixed(3);
+    }
+
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const open = document.getElementById('mobileNav').classList.toggle('open');
+      this.classList.toggle('open', open);
       document.body.classList.toggle('nav-open', open);
     });
 
-    // Close on link click
     document.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileNav.classList.remove('open');
-        document.body.classList.remove('nav-open');
-      });
+      link.addEventListener('click', closeMobileNav);
     });
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', () => {
-      captureStartPositions();
-      onScroll();
-    });
-    // Capture once after layout, then run
-    requestAnimationFrame(() => {
-      captureStartPositions();
-      onScroll();
-    });
-    // ─────────────────────────────────────────────────────────────────────
+    document.getElementById('svcSearch').addEventListener('input', filterSvc);
 
-    const secIds = ['channels', 'services', 'sla', 'teams'];
-    const navLinks = document.querySelectorAll('nav a');
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          navLinks.forEach(l => l.classList.remove('active'));
-          const a = document.querySelector(`nav a[href="#${e.target.id}"]`);
-          if (a) a.classList.add('active');
-        }
-      });
-    }, { threshold: 0.35 });
-    secIds.forEach(id => { const el = document.getElementById(id); if (el) io.observe(el); });
+    window.addEventListener('scroll', () => {
+      morphBrand();
+      updateScrollProgress();
+      updateActiveNav();
+    }, { passive: true });
+
+    window.addEventListener('resize', morphBrand, { passive: true });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setupReveal();
+      updateScrollProgress();
+      updateActiveNav();
+
+      if (document.readyState === 'complete') {
+        requestAnimationFrame(morphBrand);
+      } else {
+        window.addEventListener('load', () => requestAnimationFrame(morphBrand), { once: true });
+      }
+    });
   </script>
 </body>
 
