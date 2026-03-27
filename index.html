@@ -645,6 +645,20 @@
       document.getElementById('noResults').style.display = count === 0 ? 'block' : 'none';
     }
 
+    function updateParallax() {
+      const hero = document.getElementById('heroSection');
+      const img = document.querySelector('.hero-bg-photo img');
+      if (!hero || !img) return;
+
+      const heroBottom = hero.offsetTop + hero.offsetHeight;
+      // Only animate while hero is at least partially visible
+      if (window.scrollY > heroBottom) return;
+
+      // Move the image downward at 35% of scroll speed — slower = deeper parallax
+      const offset = window.scrollY * 0.55;
+      img.style.transform = `translateX(20%) translateY(${offset}px)`;
+    }
+
     function updateScrollProgress() {
       const doc = document.documentElement;
       const total = doc.scrollHeight - doc.clientHeight;
@@ -802,6 +816,7 @@
       morphBrand();
       updateScrollProgress();
       updateActiveNav();
+      updateParallax();
     }, { passive: true });
 
     window.addEventListener('resize', morphBrand, { passive: true });
@@ -813,8 +828,12 @@
 
       if (document.readyState === 'complete') {
         requestAnimationFrame(morphBrand);
+        requestAnimationFrame(updateParallax);
       } else {
-        window.addEventListener('load', () => requestAnimationFrame(morphBrand), { once: true });
+        window.addEventListener('load', () => {
+          requestAnimationFrame(morphBrand);
+          requestAnimationFrame(updateParallax);
+        }, { once: true });
       }
     });
   </script>
