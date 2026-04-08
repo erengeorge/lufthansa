@@ -659,13 +659,6 @@
       img.style.transform = `translateX(20%) translateY(${offset}px)`;
     }
 
-    function updateScrollProgress() {
-      const doc = document.documentElement;
-      const total = doc.scrollHeight - doc.clientHeight;
-      const pct = total > 0 ? (window.scrollY / total) * 100 : 0;
-      document.getElementById('scrollProgress').style.width = pct + '%';
-    }
-
     function setupReveal() {
       const obs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -691,16 +684,24 @@
       const sections = ['channels', 'services', 'sla', 'teams'];
       let active = '';
 
+      const mid = window.innerHeight / 2;
+
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
+
         const r = el.getBoundingClientRect();
-        if (r.top <= 120 && r.bottom >= 120) active = id;
+
+        // Check if section spans across the middle of the screen
+        if (r.top <= mid && r.bottom >= mid) {
+          active = id;
+        }
       });
 
       desktopLinks.forEach(a => {
         a.classList.toggle('active', a.getAttribute('href') === '#' + active);
       });
+
       mobileLinks.forEach(a => {
         a.classList.toggle('active', a.getAttribute('href') === '#' + active);
       });
@@ -814,7 +815,6 @@
 
     window.addEventListener('scroll', () => {
       morphBrand();
-      updateScrollProgress();
       updateActiveNav();
       updateParallax();
     }, { passive: true });
@@ -823,7 +823,6 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       setupReveal();
-      updateScrollProgress();
       updateActiveNav();
 
       if (document.readyState === 'complete') {
