@@ -30,7 +30,16 @@
 }
 
 ::-webkit-scrollbar {
-    display: none;
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--blue);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--muted);
 }
 
 html {
